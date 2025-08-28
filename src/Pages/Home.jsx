@@ -8,7 +8,7 @@ function Home() {
   return (
     <div
       className="container-fluid home-comp"
-      style={{ width: "90%", minHeight: "75vh" }}
+      style={{ }}
     >
       <div className="row home-page">
         {/* Right Side Content */}

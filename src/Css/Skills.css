@@ -1,6 +1,11 @@
-
+.skill-container{
+  margin: auto;
+   width: 80%; 
+   min-height: 45vh; 
+  border: 2px solid;
+  overflow: hidden;
+}
 .skill-wrapper {
-    overflow: hidden;
   width: 100%;
   position: relative;
 

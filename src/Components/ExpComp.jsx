@@ -16,10 +16,10 @@ function ExpComp({ index, exp }) {
           <span className="bg-dark dot"></span>
         </div>
 
-        <div className=" p-4 bg-dark border-top-dark">
+        <div className=" p-4 bg-dark">
           <span style={{ color: "#ff5c8d" }}>const</span> {exp.title}{" "}
           <span style={{ color: "#ff5c8d" }}>=</span> <span>{"{"}</span>
-          <div className="details ps-5">
+          <div className="ps-5">
             <p>
               company: <span style={{ color: "#ffbd2e" }}>{exp.company}</span>,
             </p>

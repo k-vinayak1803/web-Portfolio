@@ -1,5 +1,7 @@
 .home-comp{
   padding-top: 4rem;
+  width: 90%; 
+  min-height: 50vh ;
 }
 .home-page {
   display: flex;

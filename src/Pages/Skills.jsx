@@ -28,9 +28,7 @@ function Skills() {
 
   return (
     <div
-      className="container-fluid d-grid justify-content-center"
-      style={{ width: "80%", minHeight: "45vh" }}
-    >
+      className="skill-container">
       <h1 className="py-5 ps-5 text-center active-link" style={{ fontSize: "4rem" }}>
         Skills
       </h1>

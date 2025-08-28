@@ -1,4 +1,5 @@
 import ExpComp from "../Components/ExpComp";
+
 import "/src/Css/Experience.css";
 import "/src/Css/media.css";
 
@@ -31,18 +32,14 @@ const experience = [
 
 function Experience() {
   return (
-    <div
-      className="container-fluid"
-      style={{ width: "80%", minHeight: "95vh" }}
-    >
+    <div className="project-container border">
       <h1
         className="py-5 ps-5 text-center active-link"
         style={{ fontSize: "4rem" }}
       >
-        Experience
+        Projects
       </h1>
-      <div className="row g-5 exp-content" >
-
+      <div className="row g-5 exp-content">
         {experience.map((exp, index) => (
           <ExpComp key={index} index={index} exp={exp} />
         ))}

@@ -11,7 +11,7 @@ import Projects from './Pages/Projects'
 
 function App() {
   return (
-    <>
+    <div className='container-fluid d-flex justify-content-center'>
       <Navbar />
 
       <div className="sections" style={{margin:'5rem 0'}}>
@@ -21,7 +21,7 @@ function App() {
         <section id="experience"><Experience /></section>
         <section id="projects"><Projects /></section>
       </div>
-    </>
+    </div>
   )
 }
 

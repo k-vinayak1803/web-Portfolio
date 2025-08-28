@@ -100,6 +100,7 @@
     min-height: 20rem; /* allow animation room */
     display: flex;
     flex-direction: column;
+    border: 2px solid;
     align-items: center;
   }
 
@@ -112,10 +113,6 @@
   /*Typewriter Comp Css*/
   .typewriter {
     padding-bottom: -30rem;
-  }
-
-  .type-text {
-    margin-left: -20rem;
   }
 
   /* Intro Comp Css*/
@@ -150,28 +147,51 @@
     margin-top: -10rem;
   }
 
+  .about-comp{
+    width: 50% !important;
+  }
+
+
+
     /*About Page Css*/
   .about-row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;   /* stack vertically */
+    align-items: center;      /* center items horizontally */
     text-align: center;
+    gap: 1rem;  
+    border: 2px solid;
   }
-
+  
   .about-image {
+    border: 2px solid;              /* space between image and text */
     float: none;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
+    width: 100%;
+    display: block !important;
   }
 
   .profile-img {
     width: 200px;
     height: 250px;
+    display: block;
+    margin: 0 auto;
   }
 
   .about-text {
+    display: block;
     clear: none;
     padding: 1rem;
     font-size: 1rem;
+    text-align: justify;
+  }
+  .skill-container{
+    min-height: 25vh !important;
+  }
+  .exp-content{
+    min-width: 100rem !important;
+    font-size: 1rem !important;
+    justify-content: center;
   }
 }
 
@@ -190,7 +210,7 @@
 
   /* Intro Comp Css*/
   .intro-box{
-        margin-top:-8rem;
+        margin-top:-6rem;
   }
 
   /*About Page Css*/
