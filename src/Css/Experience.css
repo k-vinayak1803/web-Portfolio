@@ -1,0 +1,17 @@
+.heading {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: black;
+}
+
+.dot {
+  height: 20px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+.exp-content{
+  font-size: 1.5rem;
+}

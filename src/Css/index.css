@@ -1,0 +1,15 @@
+*{
+  color: white;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-width: 605px;
+}
+
+body{
+    background:linear-gradient(145deg,#1a2233,#7f00ff,#1a2233);
+    background-repeat: no-repeat;
+    align-items: center;
+}

@@ -1,0 +1,98 @@
+section, .container-fluid {
+  scroll-margin-top: 4rem;  /* adjust based on navbar height */
+}
+/* .head-text{
+  font-size: 5rem;
+} */
+
+nav{
+  position: fixed;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  justify-content: end;
+  background:linear-gradient(-45deg,#1a2233,#7f00ff);
+  z-index: 2;
+}
+
+.link{
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
+.active-link{
+  position: relative;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: yellow;
+}
+.nav-1::before{
+  position: absolute;
+  content: "";
+  height: 6.5rem;
+  width: 0.5rem;
+  top: 0.3rem;
+  left: 2.4rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  transform: rotate(90deg);
+}
+.nav-2::before{
+  position: absolute;
+  content: "";
+  height: 8rem;
+  width: 0.5rem;
+  top: -0.5rem;
+  left: 2.9rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  transform: rotate(90deg);
+}
+.nav-3::before{
+  position: absolute;
+  content: "";
+  height: 9.0rem;
+  width: 0.5rem;
+  top: -1.1rem;
+  left: 3.8rem;
+  border-radius: 1rem;
+  background-color:yellow;
+  transform: rotate(90deg);
+}
+.nav-4::before{
+  position: absolute;
+  content: "";
+  height: 14.5rem;
+  width: 0.5rem;
+  top: -3.8rem;
+  left: 6.6rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  transform: rotate(90deg);
+}
+.nav-5::before{
+  position: absolute;
+  content: "";
+  height: 12rem;
+  width: 0.5rem;
+  top: -2.5rem;
+  left: 5.2rem;
+  border-radius: 1rem;
+  background-color:yellow;
+  transform: rotate(90deg);
+}
+
+.container-fluid{
+  overflow: hidden;
+}
+
+.link-list {
+  gap: 5rem;
+  padding: 0.5rem;
+}
+
+
+
+

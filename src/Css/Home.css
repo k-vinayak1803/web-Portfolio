@@ -1,0 +1,103 @@
+.home-comp{
+  padding-top: 4rem;
+}
+.home-page {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping instead of overlap */
+  justify-content: center;
+}
+
+.intro-outer{
+  margin-top: 2rem;
+}
+
+.inner-outer {
+  width: 100%;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.intro-box {
+  font-size: clamp(1rem, 5vh, 1.5rem);
+  width: 100%; /* ✅ stretch to parent */
+  max-width: 40rem; /* ✅ prevent overflow */
+  flex: 1; /* ✅ allow flex growth */
+}
+
+.header-text {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem ;
+}
+.typewriter {
+  display: flex;
+  align-items: center; /* centers vertically */
+}
+
+/* Make heading large on desktop */
+.home-page h1,
+.typewriter-text {
+  font-size: clamp(4.5rem, 5vw, 6rem); /* scales between 24px → 48px */
+  font-weight: bold;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: black;
+}
+
+.dot {
+  height: 20px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.typewriter-text {
+  font-family: monospace;
+  font-size: clamp(4.5rem, 5vw, 6rem);
+  font-weight: bold;
+  white-space: nowrap;
+  height: 5rem !important;
+  margin: 0 0 3rem 0;
+}
+.typewriter-text .text {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: typing 3s steps(15, end) forwards;
+  border-right: none; /* make sure text itself has no border */
+}
+
+.typewriter-text .cursor {
+  display: inline-block;
+  width: 5px; /* thin caret */
+  height: 1em; /* same height as text */
+  background: white;
+  vertical-align: bottom;
+  animation: blink 0.7s step-end infinite;
+  margin-left: 2px;
+}
+
+/* typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* cursor blinking */
+@keyframes blink {
+  50% {
+    background: transparent;
+  }
+}
+
+/* Mobiles */

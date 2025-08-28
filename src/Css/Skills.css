@@ -1,0 +1,50 @@
+
+.skill-wrapper {
+    overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.skill-box {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  animation: scroll 20s linear infinite;
+}
+
+.outer-cont {
+  min-width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* only move half (because we duplicate) */
+  }
+}
+
+
+.inner-cont {
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column; /* stack img and text vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  height: 100%; /* ensure it takes full parent height */
+}
+.inner-cont img {
+  border-radius: 50%;
+}
