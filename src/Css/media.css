@@ -12,6 +12,21 @@
     gap: 1rem;
     padding: 0.5rem;
   }
+  .box-outerCont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  justify-content: space-around;
+}
+
+.box-content {
+  display: flex;
+  justify-content: center;
+    flex-direction: column; /* optional, if stacking content vertically */
+  width: clamp(35rem, 100vw, 40rem); /* responsive width */
+  font-size: clamp(1.2rem,2vw,1.5rem);
+
+}
 }
 @media (max-width: 1173px) {
   /* Home Page Css*/

@@ -1,20 +1,23 @@
 .skill-container {
-  margin: auto;
-  width: 80%;
+  margin: 0 auto;
+  width: clamp(31rem, 80vw, 85rem);
   min-height: 45vh;
   overflow: hidden;
-  margin: 0 auto; /* top/bottom spacing + horizontal centering */
-  width: clamp(31rem, 80vw, 85rem); /* optional cap */
+}
+
+.section-title {
+  font-size: 4rem;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 .skill-box {
   display: flex;
-  flex-shrink: 3;
   gap: 2rem;
   width: max-content;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;
   animation: scroll 20s linear infinite;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .outer-cont {
@@ -29,23 +32,22 @@
   flex-shrink: 0;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%); /* only move half (because we duplicate) */
-  }
-}
-
 .inner-cont {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 1rem;
-  flex-direction: column; /* stack img and text vertically */
-  align-items: center; /* center horizontally */
-  justify-content: center; /* center vertically */
-  height: 100%; /* ensure it takes full parent height */
+  height: 100%;
 }
+
 .inner-cont img {
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* only move half (because we duplicate) */
 }

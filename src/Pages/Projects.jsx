@@ -8,12 +8,11 @@ const projects = [
     type: "E-Commerce Web Application",
     description: [
       "Built a responsive shoe store with product listings and cart features",
-      "Used clean HTML and CSS for layout and  styling",
+      "Used clean HTML and CSS for layout and styling",
       "Focused on user-friendly navigation and mobile experience",
     ],
     github: "https://github.com/k-vinayak1803/Medstore-Project.git",
-    vercel:
-      "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
+    vercel: "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
   },
   {
     name: "Medstore",
@@ -21,11 +20,10 @@ const projects = [
     description: [
       "Developed a pharmacy site with product search and category filters",
       "Implemented login/registration and promotional banners",
-      "Used Bootstrap for clean , accessible design",
+      "Used Bootstrap for clean, accessible design",
     ],
     github: "https://github.com/k-vinayak1803/Medstore-Project.git",
-    vercel:
-      "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
+    vercel: "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
   },
   {
     name: "To-Do List",
@@ -36,26 +34,20 @@ const projects = [
       "Designed a clean interface with mobile compatibility",
     ],
     github: "https://github.com/k-vinayak1803/Medstore-Project.git",
-    vercel:
-      "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
+    vercel: "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
   },
 ];
 
 function Projects() {
   return (
-    <div className="box-container">
-      <h1
-        className="py-5 ps-5 text-center active-link"
-        style={{ fontSize: "4rem" }}
-      >
-        Projects
-      </h1>
+    <section className="box-container">
+      <h1 className="section-title active-link">Projects</h1>
       <div className="box-outerCont">
         {projects.map((project, index) => (
           <ProjectComp key={index} project={project} index={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

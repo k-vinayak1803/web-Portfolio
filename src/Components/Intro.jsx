@@ -7,57 +7,45 @@ function Intro() {
     role: "Full Stack Developer",
     skills: ["React", "Node.js", "MySQL", "Python"],
     experience: "2 years",
-    hardWorker: "true",
-    quickLearner: "true",
-    problemSolver: "true",
+    hardWorker: true,
+    quickLearner: true,
+    problemSolver: true,
   };
 
   return (
-      <div className="intro-box " >
-        <div
-          className="align-content-center heading"
-          style={{ height: "4rem" }}>
-          <span className="dot bg-danger"></span>
-          <span className=" dot bg-warning"></span>
-          <span className="bg-dark dot"></span>
-        </div>
+    <div className="intro-box">
+      <div className="heading-bar">
+        <span className="dot bg-danger"></span>
+        <span className="dot bg-warning"></span>
+        <span className="dot bg-dark"></span>
+      </div>
 
-        <div className="p-4 bg-dark" >
-          <span style={{ color: "#ff5c8d" }}>const</span> coder{" "}
-          <span style={{ color: "#ff5c8d" }}>=</span> <span>{"{"}</span>
-          <div className="details ps-5 py-2">
-            <p>
-              name : <span style={{ color: "#ffbd2e" }}>{coder.name} </span>,
-            </p>
-            <p >
-              skills: [{" "}
-              <span style={{ color: "#ffbd2e"}} >
-                {coder.skills.join(", ")}
-              </span>
-              ],
-            </p>
-            <p>
-              role : <span style={{ color: "#ffbd2e" }}>{coder.role}</span> ,
-            </p>
-            <p>
-              {" "}
-              <span style={{ color: "#4fc3f7" }}>hardWorker</span> :{" "}
-              <span style={{ color: "#4ec9b0" }}>{coder.hardWorker}</span> ,
-            </p>
-            <p>
-              {" "}
-              <span style={{ color: "#4fc3f7" }}>quickLearner</span> :{" "}
-              <span style={{ color: "#4ec9b0" }}>{coder.quickLearner} </span>,
-            </p>
-            <p>
-              {" "}
-              <span style={{ color: "#4fc3f7" }}>problemSolver </span>:{" "}
-              <span style={{ color: "#4ec9b0" }}>{coder.problemSolver}</span>{" "}
-            </p>
-            <p>{"};"}</p>
-          </div>
+      <div className="intro-code bg-dark p-4">
+        <span className="keyword">const</span> coder <span className="operator">=</span> {"{"}
+        <div className="details ps-5 py-2">
+          <p>
+            name: <span className="value yellow">{coder.name}</span>,
+          </p>
+          <p>
+            skills: [<span className="value yellow">{coder.skills.join(", ")}</span>],
+          </p>
+          <p>
+            role: <span className="value yellow">{coder.role}</span>,
+          </p>
+          <p>
+            <span className="property">hardWorker</span>: <span className="value blue">{String(coder.hardWorker)}</span>,
+          </p>
+          <p>
+            <span className="property">quickLearner</span>: <span className="value blue">{String(coder.quickLearner)}</span>,
+          </p>
+          <p>
+            <span className="property">problemSolver</span>: <span className="value blue">{String(coder.problemSolver)}</span>
+          </p>
+          <p>{"};"}</p>
         </div>
       </div>
+    </div>
   );
 }
+
 export default Intro;

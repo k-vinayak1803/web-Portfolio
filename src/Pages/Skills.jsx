@@ -15,51 +15,35 @@ import "/src/Css/media.css";
 
 function Skills() {
   const skills = [
-    { name: "HTML", imgSrc: htmlImg, color: "black" },
-    { name: "CSS", imgSrc: cssImg, color: "black" },
-    { name: "JavaScript", imgSrc: jsImg, color: "black" },
-    { name: "Bootstrap", imgSrc: bootstrapImg, color: "black" },
-    { name: "React", imgSrc: reactImg, color: "black" },
-    { name: "Tailwind", imgSrc: tailwindImg, color: "black" },
-    { name: "Git/GitHub", imgSrc: githubImg, color: "black" },
-    { name: "SQL", imgSrc: sqlImg, color: "black" },
-    { name: "Django", imgSrc: djangoImg, color: "black" },
+    { name: "HTML", imgSrc: htmlImg },
+    { name: "CSS", imgSrc: cssImg },
+    { name: "JavaScript", imgSrc: jsImg },
+    { name: "Bootstrap", imgSrc: bootstrapImg },
+    { name: "React", imgSrc: reactImg },
+    { name: "Tailwind", imgSrc: tailwindImg },
+    { name: "Git/GitHub", imgSrc: githubImg },
+    { name: "SQL", imgSrc: sqlImg },
+    { name: "Django", imgSrc: djangoImg },
   ];
 
   return (
-    <div
-      className="skill-container">
-      <h1 className="py-5 ps-5 text-center active-link" style={{ fontSize: "4rem" }}>
-        Skills
-      </h1>
-      <div style={{ width: "85rem" }}>
-        {/* Infinite Scrolling Row */}
- 
-          <div className="skill-box">
+    <section className="skill-container">
+      <h1 className="section-title active-link">Skills</h1>
 
-            {/* Generates two sets  */}
-            {[...Array(2)].map((_, idx) =>
-              skills.map((s, i) => (
-                <div 
-                key={`${idx}-${i}`}
-                  className="outer-cont"
-                  style={{ background: s.color }}
-                >
-                  <div className="inner-cont">
-                    <img
-                      src={s.imgSrc}
-                      alt={s.name}
-                      style={{ width: "5rem", height: "5rem" }}
-                    />
-                    <h3>{s.name}</h3>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
-
-    </div>
+      <div className="skill-box">
+        {/* Duplicate list for infinite scroll */}
+        {[...Array(2)].map((_, idx) =>
+          skills.map((s, i) => (
+            <div key={`${idx}-${i}`} className="outer-cont">
+              <div className="inner-cont">
+                <img src={s.imgSrc} alt={s.name} />
+                <h3>{s.name}</h3>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+    </section>
   );
 }
 

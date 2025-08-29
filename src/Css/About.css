@@ -32,7 +32,7 @@
   font-size: 1.7rem;
   line-height: 1.6;
   text-align: justify;
-  width: clamp(68%,80vw,84rem);
+  width: clamp(68%, 80vw, 84rem);
 }
 
 .highlight {
@@ -50,10 +50,8 @@
   opacity: 0;
   transition: all 1s ease-out;
 }
-
 .slide-left { transform: translateX(-120px); }
 .slide-right { transform: translateX(120px); }
-
 .slide-left.visible, 
 .slide-right.visible {
   opacity: 1;
