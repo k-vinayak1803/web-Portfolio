@@ -1,5 +1,5 @@
 .about-container {
-  width: 80%;
+  width: 82%;
   margin: auto;
   min-height: 65vh;
 }
@@ -13,7 +13,6 @@
 .about-row {
   display: block;
   overflow: hidden; /* contain floated children */
-  padding: 1rem;
 }
 
 .about-image {
@@ -32,6 +31,8 @@
 .about-text {
   font-size: 1.7rem;
   line-height: 1.6;
+  text-align: justify;
+  width: clamp(68%,80vw,84rem);
 }
 
 .highlight {

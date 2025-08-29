@@ -1,11 +1,11 @@
-import '/src/Css/Experience.css'
+import '/src/Css/Box.css'
 import '/src/Css/media.css'
 
 function ExpComp({ index, exp }) {
   if (!exp) return null;
 
   return (
-    <div className="col-6 exp-content" key={index}>
+    <div className="box-content" key={index}>
       <div className="row justify-content-center ">
         <div
           className="row align-content-center heading"

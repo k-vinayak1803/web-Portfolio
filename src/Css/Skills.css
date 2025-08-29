@@ -1,18 +1,15 @@
-.skill-container{
+.skill-container {
   margin: auto;
-   width: 80%; 
-   min-height: 45vh; 
-  border: 2px solid;
+  width: 80%;
+  min-height: 45vh;
   overflow: hidden;
-}
-.skill-wrapper {
-  width: 100%;
-  position: relative;
-
+  margin: 0 auto; /* top/bottom spacing + horizontal centering */
+  width: clamp(31rem, 80vw, 85rem); /* optional cap */
 }
 
 .skill-box {
   display: flex;
+  flex-shrink: 3;
   gap: 2rem;
   width: max-content;
   scrollbar-width: none;
@@ -40,7 +37,6 @@
     transform: translateX(-50%); /* only move half (because we duplicate) */
   }
 }
-
 
 .inner-cont {
   display: flex;

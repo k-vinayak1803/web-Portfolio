@@ -1,4 +1,4 @@
-section, .container-fluid {
+section {
   scroll-margin-top: 4rem;  /* adjust based on navbar height */
 }
 /* .head-text{

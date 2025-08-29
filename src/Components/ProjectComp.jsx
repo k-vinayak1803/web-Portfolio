@@ -1,12 +1,12 @@
 
-import "/src/Css/Experience.css";
+import "/src/Css/Box.css";
 import "/src/Css/media.css";
 
 function ProjectComp({ index, project }) {
   if (!project) return null;
 
   return (
-    <div className="col-6 exp-content" key={index}>
+    <div className="box-content justify-content-around" key={index}>
       <div className="row justify-content-center ">
         <div
           className="row align-content-center heading "
@@ -41,7 +41,7 @@ function ProjectComp({ index, project }) {
 
           <p>] {"};"}</p>
 
-          <div className="project-btn d-flex gap-3 mt-3">
+          <div className="box-btn d-flex gap-3 mt-3">
             <a
               className="btn btn-warning"
               target="_blank"

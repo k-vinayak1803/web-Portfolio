@@ -34,7 +34,7 @@ function Skills() {
       </h1>
       <div style={{ width: "85rem" }}>
         {/* Infinite Scrolling Row */}
-        <div className="skill-wrapper">
+ 
           <div className="skill-box">
 
             {/* Generates two sets  */}
@@ -58,7 +58,7 @@ function Skills() {
             )}
           </div>
         </div>
-      </div>
+
     </div>
   );
 }

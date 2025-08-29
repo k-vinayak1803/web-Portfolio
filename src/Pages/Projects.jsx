@@ -1,5 +1,5 @@
 import ProjectComp from "../Components/ProjectComp";
-import "/src/Css/Experience.css";
+import "/src/Css/Box.css";
 import "/src/Css/media.css";
 
 const projects = [
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     name: "Medstore",
-    type: "E-Commerce Healthcare Platform",
+    type: "E-Com Healthcare Platform",
     description: [
       "Developed a pharmacy site with product search and category filters",
       "Implemented login/registration and promotional banners",
@@ -43,14 +43,14 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="project-container border">
+    <div className="box-container">
       <h1
         className="py-5 ps-5 text-center active-link"
         style={{ fontSize: "4rem" }}
       >
         Projects
       </h1>
-      <div className="row g-5 exp-content">
+      <div className="box-outerCont">
         {projects.map((project, index) => (
           <ProjectComp key={index} project={project} index={index} />
         ))}
