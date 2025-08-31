@@ -1,23 +1,28 @@
 .skill-container {
   margin: 0 auto;
-  width: clamp(31rem, 80vw, 85rem);
+  width: 80%;
   min-height: 45vh;
   overflow: hidden;
 }
 
-.section-title {
+.skill-section-title {
   font-size: 4rem;
-  padding: 2rem 0;
   text-align: center;
+  margin: 0 0-2rem 0;
+  /* border: 2px solid; */
 }
 
 .skill-box {
   display: flex;
   gap: 2rem;
+  align-items:center;
+  height: 27rem;
   width: max-content;
   animation: scroll 20s linear infinite;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  /* border: 2px solid; */
+
 }
 
 .outer-cont {
@@ -38,7 +43,6 @@
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
-  height: 100%;
 }
 
 .inner-cont img {
@@ -50,4 +54,20 @@
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); } /* only move half (because we duplicate) */
+}
+
+.outer-cont:hover .inner-cont img ,
+.outer-cont:hover .inner-cont h3 
+{
+  filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.9));
+  transform: scale(1.1);
+}
+.outer-cont:hover .inner-cont h3{
+  font-size: 2rem;
+  transform: translateY(0.2rem);
+}
+
+.skill-box-color{
+  box-shadow: 0 0 30px rgba(255, 193, 7, 0.9);
+  transition: box-shadow 0.3s ease-in-out;
 }

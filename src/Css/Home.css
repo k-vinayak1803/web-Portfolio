@@ -1,31 +1,24 @@
 /* ===== Home Layout ===== */
 .home-comp {
   padding-top: 4rem;
-  width: 90%;
-  min-height: 50vh;
-}
-
-.home-page {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 80%;
+  min-height: 75vh;
+  margin: auto;
 }
 
 .intro-outer {
   margin-top: 2rem;
 }
 
-.inner-outer {
-  width: 100%;
-  max-width: 100%;
+.intro-outer {
   flex-grow: 1;
+  gap: 3rem;
 }
 
 /* ===== Intro Box ===== */
 .intro-box {
   font-size: clamp(1rem, 5vh, 1.5rem);
-  width: 100%;
-  max-width: 40rem;
+  width: clamp(40rem,60vw,50rem);
   flex: 1;
 }
 
@@ -63,23 +56,24 @@
 
 .typewriter-text {
   font-family: monospace;
-  font-size: clamp(4.5rem, 5vw, 6rem);
   font-weight: bold;
   white-space: nowrap;
   margin: 0 0 3rem 0;
 }
 
 .typewriter-text .text {
+  font-size: clamp(4.5rem, 5vw, 6rem);
   display: inline-block;
   overflow: hidden;
-  vertical-align: bottom;
+  vertical-align: top;
+  width: 0; /* Needed for typing effect */
   animation: typing 3s steps(15, end) forwards;
 }
 
 .typewriter-text .cursor {
   display: inline-block;
   width: 5px;
-  height: 1em;
+  height:clamp(4.5rem, 5vw, 6rem);
   background: white;
   vertical-align: bottom;
   animation: blink 0.7s step-end infinite;
@@ -115,9 +109,59 @@
 
 /* ===== Dots ===== */
 .dot {
-  height: 20px;
-  width: 12px;
+  min-height: 20px;
+  min-width: 20px;
   border-radius: 50%;
-  margin-right: 8px;
   display: inline-block;
+  background-color: red;
+}
+
+/* Scroll-in animations */
+.slide-left,
+.slide-right {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+}
+
+
+.slide-right {
+  transform: translateX(120px);
+}
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/*Color Layout*/
+/* Code theme colors */
+.kwd { color: #ff5c8d; font-weight: 600; }     /* keywords: const, = */
+.val { color: #ffbd2e; }                       /* values: company, location */
+.prop { color: #4ec9b0; font-weight: 600; }    /* properties: responsibilities */
+.string { color: #4fc3f7; }                    /* strings: tasks */
+
+/* Responsibilities list */
+.resp-list {
+  list-style: none;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.resp-list li {
+  margin: 0.2rem 0;
+}
+
+/* Code block look */
+.code-block {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.home-text-color{
+    text-shadow: 0 0 2px rgba(255, 193, 7, 0.9), 0 0 4px rgba(255, 193, 7, 0.7),
+    0 0 6px rgba(255, 193, 7, 0.5);
 }

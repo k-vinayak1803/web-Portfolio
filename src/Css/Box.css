@@ -1,3 +1,4 @@
+/* ===== Container & Layout ===== */
 .box-container {
   width: 80%;
   min-height: 100vh;
@@ -5,12 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.section-title {
-  font-size: 4rem;
-  padding: 2rem 0;
-  text-align: center;
 }
 
 .box-outerCont {
@@ -22,25 +17,36 @@
 
 .box-content {
   display: flex;
-  width: clamp(35rem, 100vw, 40rem);
+  width: clamp(35rem, 100%, 40rem);
   font-size: clamp(1.2rem, 2vw, 1.5rem);
+  /* padding: 1rem; */ /* Uncomment if needed */
 }
 
+/* ===== Heading & Dots ===== */
 .heading {
   display: flex;
   align-items: center;
+  height: 4rem;
   padding-left: 10px;
   background-color: black;
 }
 
 .dot {
-  height: 20px;
+  min-height: 20px;
   width: 12px;
   border-radius: 50%;
   margin-right: 8px;
   display: inline-block;
 }
 
+/* ===== Section Title ===== */
+.section-title {
+  font-size: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* ===== Buttons ===== */
 .box-btn a {
   width: clamp(8rem, 10vw, 16rem);
   margin: auto;

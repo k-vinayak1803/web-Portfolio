@@ -6,11 +6,9 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(-45deg, #1a2233, #7f00ff);
+  justify-content: end;
+  background: linear-gradient(-175deg, #0f0f0f, #434343);
   z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 2rem;
 }
 
 .link,
@@ -18,44 +16,52 @@ nav {
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.link {
   color: white;
 }
 
-.link:hover {
-  color: yellow;
-}
-
 .active-link {
-  color: yellow;
+  color: rgba(255, 193, 7, 0.9);
   position: relative;
 }
 
-/* Decorative bar under active nav */
-.nav-1::before,
-.nav-2::before,
-.nav-3::before,
-.nav-4::before,
-.nav-5::before {
-  position: absolute;
+/* Base highlight line for active links */
+.active-link::before {
   content: "";
+  position: absolute;
   width: 0.5rem;
   border-radius: 1rem;
-  background-color: yellow;
+  background-color: rgba(255, 193, 7, 0.9);
   transform: rotate(90deg);
 }
 
-.nav-1::before { height: 6.5rem; top: 0.3rem; left:2.5rem ;}
-.nav-2::before { height: 8rem; top: -0.5rem;left:3rem ; }
-.nav-3::before { height: 9rem; top: -1.1rem;left: 3.8rem; }
-.nav-4::before { height: 14.5rem; top: -3.8rem;left:6.6rem }
-.nav-5::before { height: 12rem; top: -2.5rem;left:5.2rem  }
+/* Individual adjustments */
+.nav-1::before { height: 6.5rem; top: 0.3rem; left: 2.4rem; }
+.nav-2::before { height: 8rem;   top: -0.5rem; left: 2.9rem; }
+.nav-3::before { height: 9rem;   top: -1.1rem; left: 3.8rem; }
+.nav-4::before { height: 14.5rem; top: -3.8rem; left: 6.6rem; }
+.nav-5::before { height: 12rem;  top: -2.5rem; left: 5.2rem; }
+
+.container-fluid {
+  overflow: hidden;
+}
 
 .link-list {
-  display: flex;
   gap: 3rem;
+  padding: 0.5rem;
+}
+.link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  cursor: pointer;
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.link-list {
+  gap: clamp(1rem,0.5%,2.5rem);
   align-items: center;
 }

@@ -8,13 +8,12 @@
 
 html, body {
   min-width: 605px;
-  height: 100%;
 }
 
 body {
-  background: linear-gradient(145deg, #1a2233, #7f00ff, #1a2233);
-  background-repeat: no-repeat;
-  display: flex; /* enables alignment */
-  align-items: center;
-  justify-content: center; /* centers content horizontally */
+  background: linear-gradient(#1a1a1a);
+  background-size: cover;
+  cursor:pointer;
 }
+
+/* background: linear-gradient(45deg, #1a2233, #7f00ff, #1a2233); */

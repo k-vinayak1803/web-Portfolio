@@ -6,7 +6,7 @@ import "/src/Css/media.css";
 function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
 
-  // Detect visible section
+  // Detect which section is visible
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -18,7 +18,7 @@ function Navbar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 } // 60% of section visible = active
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -28,37 +28,56 @@ function Navbar() {
     };
   }, []);
 
-  // Define navbar links
-  const links = [
-    { id: "home", label: "Home", className: "nav-1" },
-    { id: "about", label: "About", className: "nav-2" },
-    { id: "skills", label: "Skills", className: "nav-3" },
-    { id: "experience", label: "Experience", className: "nav-4" },
-    { id: "projects", label: "Projects", className: "nav-5" },
-  ];
-
   return (
-    <nav className="d-flex px-5">
+    <nav className=" d-flex px-5">
       <div className="d-flex link-list">
-        {links.map((link) => (
-          <NavHashLink
-            key={link.id}
-            smooth
-            to={`/#${link.id}`}
-            onClick={() => setActiveLink(link.id)}
-            className={
-              activeLink === link.id ? `active-link ${link.className}` : "link"
-            }
-          >
-            {link.label}
-          </NavHashLink>
-        ))}
+        <NavHashLink
+          smooth
+          to="/#home"
+          onClick={() => setActiveLink("home")}
+          className={`text-color ${activeLink === "home" ? "active-link nav-1" : "link text-color"}`}
+        >
+          Home
+        </NavHashLink>
+
+        <NavHashLink
+          smooth
+          to="/#about"
+          onClick={() => setActiveLink("about")}
+          className={`text-color ${activeLink === "about" ? "active-link nav-2" : "link text-color"}`}
+        >
+          About
+        </NavHashLink>
+
+        <NavHashLink
+          smooth
+          to="/#skills"
+          onClick={() => setActiveLink("skills")}
+          className={`text-color ${activeLink === "skills" ? "active-link nav-3" : "link text-color"}`}
+        >
+          Skills
+        </NavHashLink>
+
+        <NavHashLink
+          smooth
+          to="/#experience"
+          onClick={() => setActiveLink("experience")}
+          className={`text-color ${activeLink === "experience" ? "active-link nav-4" : "link"}`}
+        >
+          Experience
+        </NavHashLink>
+
+        <NavHashLink
+          smooth
+          to="/#projects"
+          onClick={() => setActiveLink("projects")}
+          className={` text-color ${activeLink === "projects" ? "active-link nav-5" : "link"}`}
+        >
+          Projects
+        </NavHashLink>
       </div>
     </nav>
   );
 }
 
 export default Navbar;
-
-
-
