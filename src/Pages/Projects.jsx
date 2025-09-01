@@ -11,7 +11,7 @@ const projects = [
       "Used clean HTML and CSS for layout and  styling",
       "Focused on user-friendly navigation and mobile experience",
     ],
-    github: "https://github.com/k-vinayak1803/Medstore-Project.git",
+    github: "https://github.com/k-vinayak1803/E-com.git",
     vercel:
       "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
   },
@@ -25,7 +25,7 @@ const projects = [
     ],
     github: "https://github.com/k-vinayak1803/Medstore-Project.git",
     vercel:
-      "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
+      "https://medstore-project.vercel.app/",
   },
   {
     name: "To-Do List",
@@ -35,9 +35,9 @@ const projects = [
       "Enabled real-time task updates with event-driven DOM changes",
       "Designed a clean interface with mobile compatibility",
     ],
-    github: "https://github.com/k-vinayak1803/Medstore-Project.git",
+    github: "https://github.com/k-vinayak1803/To-Do-List.git",
     vercel:
-      "https://e-com-git-main-vinayak-kumawats-projects-b85ea45b.vercel.app",
+      "https://to-do-list-omega-nine-79.vercel.app/",
   },
 ];
 
