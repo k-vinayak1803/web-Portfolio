@@ -2,13 +2,15 @@ import React from "react";
 
 import htmlImg from "../images/html-5.png";
 import cssImg from "../images/css-3.png";
-import jsImg from "../images/js.png";
+// import jsImg from "../images/js.png";
+import jsImg from "../images/javascript.png";
 import bootstrapImg from "../images/bootstrap.png";
 import reactImg from "../images/react.png";
 import nextImg from "../images/nextjs.png";
 import expressImg from "../images/express.png";
 import tailwindImg from "../images/tailwind.png";
 import githubImg from "../images/github.png";
+import pythonImg from "../images/python.png";
 import sqlImg from "../images/sql.png";
 import djangoImg from "../images/django.svg";
 import mongoDB from "../images/mongodb.png";
@@ -28,6 +30,7 @@ function Skills() {
     { name: "Bootstrap", imgSrc: bootstrapImg, color: "black" },
     { name: "Tailwind", imgSrc: tailwindImg, color: "black" },
     { name: "Git/GitHub", imgSrc: githubImg, color: "black" },
+    { name: "Python", imgSrc: pythonImg, color: "black" },
     { name: "SQL", imgSrc: sqlImg, color: "black" },
     { name: "MongoDB", imgSrc: mongoDB, color: "black" },
   ];
