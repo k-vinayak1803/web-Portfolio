@@ -1,67 +1,59 @@
-section {
-  scroll-margin-top: 4rem; /* adjust based on navbar height */
-}
-
+/* --- NAV BAR --- */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  justify-content: end;
-  background: linear-gradient(-175deg, #0f0f0f, #434343);
+  display: flex; /* Added display: flex */
+  justify-content: flex-end; /* Changed from 'end' to 'flex-end' */
+  background: rgb(45, 45, 45);
   z-index: 2;
 }
 
-.link,
-.active-link {
-  text-decoration: none;
+.link-list {
+  display: flex; /* Make sure the list is a flex container */
+  gap: clamp(1.5rem, 0.5%, 3rem);
+  align-items: center;
+  padding: 0.5rem 1rem; /* Add padding to the list itself */
+}
+
+/* --- LINKS (Default State) --- */
+.link ,
+.active-link{
+  letter-spacing: 2px;
+  
+}
+
+.link {
+  position: relative; /* Needed for the pseudo-element underline */
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 800; /* Set one weight and stick with it */
   color: white;
+  padding: 0.5rem 0.25rem; /* Added padding for spacing */
+  transition: color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 5px solid rgb(45, 45, 45);
 }
+
+/* --- LINKS (Active State) --- */
 
 .active-link {
+  display: inline-block;          /* needed for border-radius */
+  font-size: 2.5rem;
+  font-weight: 800; /* Set one weight and stick with it */
   color: rgba(255, 193, 7, 0.9);
+  text-decoration: none;
   position: relative;
+  padding-bottom: 5px;            /* space between text and the “pill” */
 }
 
-/* Base highlight line for active links */
-.active-link::before {
+.active-link::after {
   content: "";
   position: absolute;
-  width: 0.5rem;
-  border-radius: 1rem;
+  left: -0.3rem;
+  bottom: 0;
+  width: 105%;
+  height: 10px;                   /* thickness of the underline */
   background-color: rgba(255, 193, 7, 0.9);
-  transform: rotate(90deg);
-}
-
-/* Individual adjustments */
-.nav-1::before { height: 6.5rem; top: 0.3rem; left: 2.4rem; }
-.nav-2::before { height: 8rem;   top: -0.5rem; left: 2.9rem; }
-.nav-3::before { height: 9rem;   top: -1.1rem; left: 3.8rem; }
-.nav-4::before { height: 14.5rem; top: -3.8rem; left: 6.6rem; }
-.nav-5::before { height: 12rem;  top: -2.5rem; left: 5.2rem; }
-
-.container-fluid {
-  overflow: hidden;
-}
-
-.link-list {
-  gap: 3rem;
-  padding: 0.5rem;
-}
-.link {
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  cursor: pointer;
-}
-
-.active-link {
-  font-weight: bold;
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.link-list {
-  gap: clamp(1rem,0.5%,2.5rem);
-  align-items: center;
+  border-radius:1rem;   /* semi-circular edges at bottom */
 }

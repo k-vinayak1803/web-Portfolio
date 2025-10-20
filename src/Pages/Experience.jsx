@@ -35,7 +35,7 @@ function Experience() {
   return (
     <div className="box-container">
       <h1
-        className="py-5 ps-5 text-center active-link" style={{fontSize:'4rem'}}>
+        className="py-5 ps-5 text-center section-title" style={{fontSize:'4rem'}}>
         Experience
       </h1>
       <div className="box-outerCont">

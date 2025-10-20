@@ -45,7 +45,7 @@ function Projects() {
   return (
     <div className="box-container">
       <h1
-        className="py-5 ps-5 text-center active-link"
+        className="py-5 ps-5 text-center section-title"
         style={{ fontSize: "4rem" }}
       >
         Projects

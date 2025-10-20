@@ -44,7 +44,7 @@ function ProjectComp({ index, project }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Github
+                View Code
               </a>
               <a
                 className="btn btn-warning"
@@ -52,7 +52,7 @@ function ProjectComp({ index, project }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Live Demo
+                Live Preview
               </a>
             </div>
           </div>
