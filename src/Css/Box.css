@@ -1,7 +1,7 @@
 /* ===== Container & Layout ===== */
 .box-container {
   width: 80%;
-  min-height: 100vh;
+  min-height: fit-content;
   margin: auto;
   display: flex;
   flex-direction: column;

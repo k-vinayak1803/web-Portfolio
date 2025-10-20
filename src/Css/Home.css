@@ -2,7 +2,7 @@
 .home-comp {
   padding-top: 4rem;
   width: 80%;
-  min-height: 75vh;
+  min-height: fit-content;
   margin: auto;
 }
 
